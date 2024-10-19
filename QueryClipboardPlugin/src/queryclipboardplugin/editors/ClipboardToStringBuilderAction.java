@@ -66,7 +66,7 @@ public class ClipboardToStringBuilderAction extends AbstractHandler {
 			// Cria o conteúdo a ser adicionado
 			StringBuilder sb = new StringBuilder();
 			for (String line : queryLines) {
-				sb.append("sql.append(\"").append(line.trim()).append("\");\n");
+				sb.append("sql.append(\" ").append(line.trim()).append("\");\n");
 			}
 
 			// Insere o conteúdo da área de transferência na posição do cursor

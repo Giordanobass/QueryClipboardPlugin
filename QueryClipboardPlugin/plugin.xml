@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <!-- Definição do editor XML customizado -->
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            id="queryclipboardplugin.editors.XMLEditor"
+            name="Sample XML Editor"
+            icon="icons/sample.png"
+            extensions="xml"
+            class="queryclipboardplugin.editors.XMLEditor"
+            contributorClass="org.eclipse.ui.texteditor.BasicTextEditorActionContributor">
+      </editor>
+   </extension>
+
+   <!-- Definição do comando -->
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="QueryClipboardPlugin.commands.category"
+            name="Sample Category">
+      </category>
+      <command
+            categoryId="QueryClipboardPlugin.commands.category"
+            name="Clipboard to StringBuilder"
+            id="QueryClipboardPlugin.commands.clipboardToStringBuilderCommand">
+      </command>
+   </extension>
+
+   <!-- Handler para mapear a execução do comando com a ação -->
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="queryclipboardplugin.editors.ClipboardToStringBuilderAction"
+            commandId="QueryClipboardPlugin.commands.clipboardToStringBuilderCommand">
+      </handler>
+   </extension>
+
+   <!-- Atalho (key binding) para o comando -->
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="QueryClipboardPlugin.commands.clipboardToStringBuilderCommand"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6"> <!-- Ctrl+6 -->
+      </key>
+   </extension>
+
+</plugin>

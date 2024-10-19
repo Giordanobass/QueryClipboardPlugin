@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="queryClipboadPluginFeature"
+      label="QueryClipboadPluginFeature"
+      version="1.0.1.qualifier">
+
+   <description url="https://github.com/Giordanobass/QueryClipboardPlugin">
+      QueryClipboardPlugin
+
+Projeto visando auxiliar os desenvolvedores Java ao utilizar NativeQuerys e StringBuilders com metodo append!
+
+Descrição
+O QueryClipboardPlugin é um plugin para o Eclipse que captura consultas SQL da área de transferência e as insere no arquivo Java ativo no formato de um StringBuilder. O plugin identifica a posição do cursor no editor de código e adiciona a query formatada no local correspondente.
+
+Funcionalidades
+Captura o conteúdo de texto da área de transferência.
+Insere consultas SQL como sql.append(&quot;...&quot;) no código Java.
+Adiciona o conteúdo na posição do cursor no arquivo.
+Como Usar
+Atalho de Teclado: Após a instalação do plugin, selecione um texto SQL na área de transferência.
+No Eclipse, posicione o cursor no arquivo Java onde deseja inserir o StringBuilder.
+Pressione Ctrl + 6 (ou o atalho configurado) para executar o plugin.
+O código será adicionado no ponto do cursor.
+Exemplo
+Suponha que a consulta SQL na área de transferência seja:
+
+SELECT * FROM users WHERE id = 1;
+Após o atalho Ctrl + 6, o plugin insere:
+
+sql.append(&quot;SELECT * FROM users WHERE id = 1;&quot;);
+No local exato onde o cursor estava no arquivo Java.
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <plugin
+         id="QueryClipboardPlugin"
+         version="0.0.0"/>
+
+</feature>

@@ -21,6 +21,8 @@ import org.eclipse.ui.texteditor.ITextEditor;
 
 public class ClipboardToStringBuilderAction extends AbstractHandler {
 
+	AditionalQueryToJavaFile addQuery = new AditionalQueryToJavaFile();
+
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
 		try {
@@ -42,7 +44,7 @@ public class ClipboardToStringBuilderAction extends AbstractHandler {
 					ITextEditor textEditor = (ITextEditor) editor;
 
 					// Adiciona cada linha da query ao StringBuilder no arquivo Java
-					addQueryToJavaFile(textEditor, queryLines);
+					addQuery.addQueryToJavaFile(textEditor, queryLines);
 				}
 			} else {
 				System.out.println("O editor ativo não é um editor de texto.");
@@ -52,51 +54,4 @@ public class ClipboardToStringBuilderAction extends AbstractHandler {
 		}
 		return null;
 	}
-
-	private void addQueryToJavaFile(ITextEditor textEditor, String[] queryLines) {
-
-		try {
-			// Obter o documento do editor
-			IDocument document = textEditor.getDocumentProvider().getDocument(textEditor.getEditorInput());
-
-			// Obter a posição do cursor no documento
-			ITextSelection selection = (ITextSelection) textEditor.getSelectionProvider().getSelection();
-			int cursorPosition = selection.getOffset();
-
-			// Cria o conteúdo a ser adicionado
-			StringBuilder sb = new StringBuilder();
-			for (String line : queryLines) {
-				sb.append("sql.append(\" ").append(line.trim()).append("\");\n");
-			}
-
-			// Insere o conteúdo da área de transferência na posição do cursor
-			document.replace(cursorPosition, 0, sb.toString());
-			
-			// Aplicar formatação de código
-	        formatCodeInEditor();
-
-			System.out.println("Conteúdo adicionado na posição do cursor.");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	private void formatCodeInEditor() {
-	    try {
-	        IHandlerService handlerService = (IHandlerService) PlatformUI.getWorkbench().getService(IHandlerService.class);
-	        ICommandService commandService = (ICommandService) PlatformUI.getWorkbench().getService(ICommandService.class);
-
-	        // Verifica se o comando de formatação está disponível
-	        Command formatCommand = commandService.getCommand("org.eclipse.jdt.ui.edit.text.java.format");
-	        if (formatCommand.isDefined()) {
-	            handlerService.executeCommand("org.eclipse.jdt.ui.edit.text.java.format", null);
-	            System.out.println("Código formatado.");
-	        } else {
-	            System.out.println("Comando de formatação não está disponível.");
-	        }
-	    } catch (Exception ex) {
-	        ex.printStackTrace();
-	    }
-	}
-
 }

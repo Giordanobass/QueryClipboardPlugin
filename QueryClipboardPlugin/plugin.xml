@@ -45,7 +45,7 @@
             commandId="QueryClipboardPlugin.commands.clipboardToStringBuilderCommand"
             schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
             contextId="org.eclipse.ui.contexts.window"
-            sequence="M1+6"> <!-- Ctrl+6 -->
+            sequence="M1+8"> <!-- Ctrl+8 -->
       </key>
    </extension>
 

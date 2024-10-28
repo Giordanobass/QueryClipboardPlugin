@@ -2,7 +2,7 @@
 <feature
       id="queryClipboadPluginFeature"
       label="QueryClipboadPluginFeature"
-      version="1.0.3.qualifier">
+      version="1.0.4.qualifier">
 
    <description url="https://github.com/Giordanobass/QueryClipboardPlugin">
       QueryClipboardPlugin
@@ -19,13 +19,13 @@ Adiciona o conteúdo na posição do cursor no arquivo.
 Como Usar
 Atalho de Teclado: Após a instalação do plugin, selecione um texto SQL na área de transferência.
 No Eclipse, posicione o cursor no arquivo Java onde deseja inserir o StringBuilder.
-Pressione Ctrl + 6 (ou o atalho configurado) para executar o plugin.
+Pressione Ctrl + 8 (ou o atalho configurado) para executar o plugin.
 O código será adicionado no ponto do cursor.
 Exemplo
 Suponha que a consulta SQL na área de transferência seja:
 
 SELECT * FROM users WHERE id = 1;
-Após o atalho Ctrl + 6, o plugin insere:
+Após o atalho Ctrl + 8, o plugin insere:
 
 sql.append(&quot;SELECT * FROM users WHERE id = 1;&quot;);
 No local exato onde o cursor estava no arquivo Java.

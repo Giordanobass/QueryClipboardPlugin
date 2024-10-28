@@ -2,12 +2,12 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: QueryClipboardPlugin
 Bundle-SymbolicName: QueryClipboardPlugin;singleton:=true
-Bundle-Version: 1.0.2.qualifier
+Bundle-Version: 1.0.4.qualifier
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.ui,
  org.eclipse.jface.text,
  org.eclipse.ui.editors,
  org.eclipse.ui.ide;bundle-version="3.22.300"
 Automatic-Module-Name: QueryClipboardPlugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Import-Package: org.eclipse.core.resources

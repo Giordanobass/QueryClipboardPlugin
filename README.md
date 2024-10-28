@@ -8,13 +8,13 @@ The QueryClipboardPlugin is an Eclipse plugin that captures SQL queries from the
 ## How to Use
 **Keyboard Shortcut**: After installing the plugin, copy an SQL query to the clipboard.
 In Eclipse, position the cursor in the Java file where you want to insert the StringBuilder.
-Press **Ctrl + 6** (or your configured shortcut) to execute the plugin.
+Press **Ctrl + 8** (or your configured shortcut) to execute the plugin.
 The code will be added at the cursor's position.
 
 ## Example
 Suppose the SQL query on the clipboard is:
 **SELECT * FROM users WHERE id = 1;**
-After pressing **Ctrl + 6**, the plugin inserts:
+After pressing **Ctrl + 8**, the plugin inserts:
 **sql.append("SELECT * FROM users WHERE id = 1;");**
 At the exact location where the cursor was in the Java file.
 ____________________________________________________________________________________________________________________________________________________________________

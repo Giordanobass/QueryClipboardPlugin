@@ -20,7 +20,7 @@ public class ClipboardToStringBuilderAction extends AbstractHandler {
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
 		try {
-			System.out.println("Atalho Ctrl+6 acionado.");
+			System.out.println("Atalho Ctrl+8 acionado.");
 			// Pega o conteúdo da área de transferência
 			Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
 			Transferable content = clipboard.getContents(null);

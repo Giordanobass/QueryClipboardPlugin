@@ -3,5 +3,5 @@
    <description name="queryClipboardPluginUpdateSite">
       queryClipboardPluginUpdateSite
    </description>
-   <feature url="features/queryClipboadPluginFeature_1.0.7.jar" id="queryClipboadPluginFeature" version="1.0.7"/>
+   <feature url="features/queryClipboadPluginFeature_1.0.8.jar" id="queryClipboadPluginFeature" version="1.0.8"/>
 </site>

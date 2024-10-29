@@ -2,7 +2,7 @@
 <feature
       id="queryClipboadPluginFeature"
       label="QueryClipboadPluginFeature"
-      version="1.0.8">
+      version="1.0.9">
 
    <description url="https://github.com/Giordanobass/QueryClipboardPlugin">
       QueryClipboardPlugin
@@ -41,6 +41,6 @@ No local exato onde o cursor estava no arquivo Java.
 
    <plugin
          id="QueryClipboardPlugin"
-         version="1.0.8"/>
+         version="1.0.9"/>
 
 </feature>

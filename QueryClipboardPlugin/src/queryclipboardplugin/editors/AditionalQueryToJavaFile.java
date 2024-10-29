@@ -29,6 +29,9 @@ public class AditionalQueryToJavaFile {
 
 			// Aplicar formatação de código
 			format.formatCodeInEditor(textEditor, cursorPosition, sb.length());
+			
+			 // Restaurar a posição do cursor
+            textEditor.selectAndReveal(cursorPosition, 0);
 
 			System.out.println("Conteúdo adicionado na posição do cursor.");
 		} catch (Exception e) {
